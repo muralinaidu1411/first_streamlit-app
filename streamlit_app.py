@@ -12,7 +12,8 @@ my_fruit_list=pd.read_csv('https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw
 my_fruit_list=my_fruit_list.set_index('Fruit')
 
 #pick up some fruits you want
-streamlit.multiselect("pick some fruits:",list(my_fruit_list.index),['Avacado','Strawberries'])
-
+fruits_selected=streamlit.multiselect("pick some fruits:",list(my_fruit_list.index),['Avacado','Strawberries'])
+fruits_to_show = my_fruit_list.loc[fruits_selected]
+streamlit.dataframe(fruits_to_show)
 #show the fruit list 
 streamlit.dataframe(my_fruit_list)
