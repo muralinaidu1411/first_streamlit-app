@@ -24,7 +24,7 @@ fruits_to_show1 = my_fruit_list.loc[fruits_selected1]
 streamlit.dataframe(fruits_to_show1)
 #show the fruit list 
 streamlit.dataframe(my_fruit_list)
-my
+
 
 
 
